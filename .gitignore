@@ -1,2 +1,22 @@
-/.DS_STORE
+# macOS (en cualquier carpeta y subcarpeta)
+**/.DS_Store
+.DS_Store
+
+# Gradle y compilación
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Entorno de desarrollo (IntelliJ IDEA)
 .idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Agentes IA / Configuración local
+.agents/
+.gemini/
+
+# Logs y archivos temporales
+*.log

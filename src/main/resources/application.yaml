@@ -1,0 +1,21 @@
+ktor:
+  deployment:
+    port: 2010
+  application:
+    modules:
+      - es.HttpKt.configureHttp
+      - es.SerializationKt.configureSerialization
+      - es.security.SecurityKt.configureSecurity
+      - es.db.ExposedKt.initDatabase
+      - es.KoinKt.configureKoin
+      - es.StatusPagesKt.configureStatusPages
+      - es.route.RoutingKt.configureRouting
+
+db:
+  driver: "com.microsoft.sqlserver.jdbc.SQLServerDriver"
+  url: "jdbc:sqlserver://localhost:1433;databaseName=gestion;encrypt=false;trustServerCertificate=true"
+  user: "***********"
+  password: "*************"
+
+security:
+  salt: 12

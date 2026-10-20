@@ -1,8 +1,7 @@
-package es
+package es.security
 
 import io.ktor.server.application.*
 import io.ktor.server.auth.*
-import io.ktor.server.response.*
 
 fun Application.configureSecurity() {
     authentication {
@@ -16,13 +15,6 @@ fun Application.configureSecurity() {
                 }
             }
         }
-    
-        form(name = "myauth2") {
-            userParamName = "user"
-            passwordParamName = "password"
-            challenge {
-                /**/
-            }
-        }
+
     }
 }
